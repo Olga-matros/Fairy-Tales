@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Fairy Tales</title>
+
+  <style>
+  html {
+  height: 100%;         
+  background: 
+  linear-gradient(182deg, rgb(243, 196, 134) 19%, rgb(224, 118, 241) 98%);
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  }
+
+  body {
+    min-height: 100vh; 
+    font-family:Arial, Helvetica, sans-serif;
+    }
+
+  h1 {
+    color: rgba(120, 6, 86, 0.941);
+    text-align: center;
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 30px 0px 0px 0px;
+    margin: 10px 50px 10px 50px;
+    }
+
+  h2 {
+    color: rgba(120, 6, 86, 0.941);
+    text-align: center;
+    border: 1px solid rgba(120, 6, 86, 0.941);
+    border-radius: 40px;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:300;
+    font-style: italic;
+    padding: 10px;
+  }
+
+  img {
+  display: block;
+  margin: 0 auto;
+  padding: 20 px;
+  border-radius: 50px;
+  max-width: 80%;
+  }
+
+   p {
+   color: black;
+   text-align: center;
+   font-size: 30px;
+   padding: 30px 0px 0px 0px;
+   margin: 40px 20px 40px 20px;
+   line-height: 1.5;       
+  }
+
+ button {
+ display: block;
+ background:rgba(234, 132, 7, 0.765);
+ color: rgba(120, 6, 86, 0.941);
+ margin: 20px auto;
+ font-size: 40px;
+ padding: 15px 30px;
+ border: none;
+ border-radius: 30px;
+ box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.3);
+ transition: all 200ms ease-in-out;
+ }
+ 
+ button:hover {
+  opacity: 0.9;
+  cursor: pointer;
+  background:white;
+  border: none;
+color: rgba(206, 38, 175, 0.941);
+
+ }
+.container {
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 30px 60px 30px 60px;
+}
+
+ .did-you-know {
+    padding-top: 10px;
+    margin-top: 20px auto;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+ }
+ 
+ .did-you-know:hover {
+    text-decoration: underline;
+    }
+
+  .author {
+text-align: center;
+ font-size: 20px;
+
+
+  }
+ body {
+font-family:Arial, Helvetica, sans-serif;
+}
+   </style>
+  </head>
+
+  <body>
+    <div class="container">
+    <h1>
+    <strong> Fairy Tales </strong>
+  <h1/>
+       <h2>
+For kids or for adults?
+       </h2>
+       <img
+     src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/038/246/original/1_dPjUe-9m2WHG3CDGE7svHw.jpeg?1656007060"
+     alt="The collection of fairy tales"
+     width="2000"
+   />
+       <p>
+        A fairy tale is often defined as a children’s story involving magical beasts,
+         imaginary creatures, and fantastical lands. That definition is true as far as it goes,
+          but I know plenty of adults who still enjoy stories about witches and princesses, curses
+           and spells, and happily ever afters. Fairy tales offer an escape from reality, and I don’t
+            trust anyone who doesn’t crave that once in a while. For the children grown old among us,
+             there are a lot of fables and folktales filled with royalty, impossible love, adventure, and
+              a dash of magic.
+       </p>
+       <br />
+      <a href="https://en.wikipedia.org/wiki/Fairy_tale#Association_with_children"
+target="_blank"
+class="did-you-know">
+ Did you know that...
+</a>
+       
+<button class="ask-button"> 
+  Fairy tales in your life </button>
+ <br />
+<p class="author">
+This page was built by
+<a href="https://www.instagram.com/matros2008/?hl=en" target="_blank"> Olha Novytska
+<a/>
+</p>
+</div>
+<script>
+  function askUser() {
+    let name = prompt("What is your name?");
+    let age = prompt("How old are you?");
+          if (age >= 18) {
+    let attitude = prompt("Do you like fairy tales?");
+            if (attitude === "yes") {
+              alert("Congrats, " + name + "! You are a child at heart🧒 ");
+            }
+            if (attitude === "no") {
+              alert("You are too rational");
+            }
+              } else {
+    let attitude = prompt("Do you like fairy tales?");
+            if (attitude === "yes") {
+              alert("You are a child greatly influenced by yhe fairy tales");
+              }
+            if (attitude === "no") {
+              alert("You are so serious child");
+              }
+          }
+      }
+  let askUserButton = document.querySelector("button");
+  askUserButton.addEventListener("click", askUser);
+</script>
+  </body>
+</html>
